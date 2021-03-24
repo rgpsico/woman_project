@@ -85,3 +85,9 @@ function deleteUser(id){
     );
 }
 
+ function Form(){
+     
+   return form;
+
+}
+

@@ -24,7 +24,9 @@ Route::put('/edit/{id}', [ManicureController::class, 'Edit']);
 Route::post('/delete/{id}', [ManicureController::class, 'delete']);
 Route::delete('/excluir/{id}', [ManicureController::class, 'Excluir']);
 
-
+Route::post('/posts/tabela',[ManicureController::class, 'CreateTabela']);
+Route::get('/list/produtos',[ManicureController::class, 'ProductList']);
+Route::get('/teste',[ManicureController::class, 'teste']);
 use App\Models\User;
 
 Route::get('/paginate/{page}', function ($page) {

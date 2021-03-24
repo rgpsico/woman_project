@@ -24,6 +24,7 @@ $(document).on('click', '.save-create-admin', function(event) {
 $('.ver_admin').click(function(){
    
     SelectUsers('http://127.0.0.1:8000/api/list/');
+    
 });
 
 /*fim admin*/
@@ -48,10 +49,12 @@ setTimeout(() => {
 });  
 
 $(document).on('click', '.manicure-create', function(event) {  
-    $('#modal-create-manicure').modal({
-      'backdrop':true
-    });
-    $(".modal-backdrop").css("display","none"); 
+  $('.modal').modal();
+  setTimeout(() => {
+  
+  }, 2000);
+ 
+  
  }); 
 
  //Quando clicar Salva , salvar Admin no banco
@@ -61,7 +64,11 @@ $(document).on('click', '.manicure-create', function(event) {
     }); 
 
     $(document).on('click', '.deletar', function(event) {
-      var id  =  $(this).attr('data-key');    
+      var id  =  $(this).attr('data-key'); 
+       $('.modal-body').text('Voce deseja Excluir?');
+         $('.modal').modal();
+         
+         
       deleteUser(id);
      
   }); 
